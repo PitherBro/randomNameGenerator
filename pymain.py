@@ -60,7 +60,7 @@ def determineSex(isBoy = babyNames.random.randint(0,1)):
     return sex
 def genName(birthYear = babyNames.random.randint(1880,2022),isBoy = babyNames.random.randint(0,1)):
     '''Returns a name based off a selected year range and bool value of boy or not'''
-    return babyNames.getRandomNameByYear(birthYear, determineSex(isBoy))
+    return babyNames.accessMasterFile(birthYear, determineSex(isBoy))
 def generatePerson(birthYear = babyNames.random.randint(1880,2022),isBoy = babyNames.random.randint(0,1)):
     '''Returns a single person class object'''
     firstName = genName(birthYear, isBoy)
@@ -72,14 +72,16 @@ def generatePeople(birthRange=(1880,2022),numberOfPeople = 16):
     '''Returns a list of person class objects'''
     people = [Person]
     for x in range(numberOfPeople):
-        randBirthYear = babyNames.random.randint(birthRange[0],birthRange[1])
+        randBirthYear = babyNames.random.randint(birthRange[0],birthRange[1]+1)
         people.append(generatePerson(randBirthYear))
     return people[1:numberOfPeople]
-    pass
+
 def menuSelection(consoleCommand=False):
-    '''Function to work on,\n
+    '''
+    Function to work on,\n
     handles a console numerical input to automate a function selection,\n
-    or presents a list of options and waits for console input'''
+    or presents a list of options and waits for console input
+    '''
     #available options for the program as numerical selection
     options = [
         'generate single name',
@@ -109,7 +111,8 @@ def menuSelection(consoleCommand=False):
                 print(f"{x+1}. {options[x]}")
             selction = input(f"which opperation would you like to do? (1-{len(options)})")
         pass
-if __name__ == "__main__":
+
+def progDebugInfo():
     # Preties and shows program information
     print(consoleBanner)
     print("Progaram Paths")
@@ -119,24 +122,27 @@ if __name__ == "__main__":
     print(consoleBanner)
     print("PROGRAM BEGINS")
     print(consoleBanner)
+
+if __name__ == "__main__":
     #saves program arg list
     args = sys.argv
 
-
-    #print(len(args))
+    '''#print(len(args))
     #if we were passed no arguments
     if len(args) == 1:
         menuSelection()
     #pass along the argument, assume only the fist arg is valid
     else:
-        menuSelection(args[1])
+        menuSelection(args[1])'''
     
+    #print(babyNames.accessMasterFile(1880, "the ultimate gender bender of all time"))
 
-    '''
-    people = generatePeople(numberOfPeople=16)
+    #babyNames.accessMasterFile(1880)
+    
+    people = generatePeople((1880,1920),numberOfPeople=1000)
     for p in people:
         print(p.toJson())
-    '''
+    
   
     
     #print(babyNames.getRandomNameByYear(2023,"girl"))
