@@ -111,6 +111,8 @@ def accessMasterFile(year,boyOrGirl=None):
         print("please only use a year between 1880 and 2022")
         return None
     contentsRaw = dict(json.loads(masterFile.read()))
+
+    #https://pscustomobject.github.io/python/Python-Reset-Read-Write-Position/
     masterFile.seek(0,0)
     #contentKeys = list(contentsRaw.keys())
     #print(contentsRaw[str(year)])
@@ -145,12 +147,17 @@ def accessMasterFile(year,boyOrGirl=None):
     #print(selection)
     return namesList[randListSelection]
     
-
+def checkModuleIntegretiy():
+    '''
+    Checks that module directories and files are all there.
+    '''
+    return os.path.exists(babyNames_1880_to_2022) and\
+         True
 
 if  __name__ == "__main__":
-    '''if this module is main, lets check the file integrity'''
+    '''if this module is main, lets check the file/module integrity'''
     #print(__name__)
-    if(os.path.exists(babyNames_1880_to_2022)):
+    if(checkModuleIntegretiy()):
         print("Good to Go")
         
     else:

@@ -21,3 +21,10 @@ All information is randomly generated based off information from this [Repo](htt
 # TODO
 - add logic to do an option base off menu selction
 - finish console command logic to complete opperations if passed as param
+- consolidate common vars and libs into common.py
+
+# Possible Adjustments
+- batch thread program to rescan a few copies of file to reduce latency.
+- http API server to request a person or random name as GET response.
+- add in automatic download, extraction, consolidation of master file on mondule load as main. via system calls from main file.
+- consider using a copy of file object rather than re-reading the same file x times.
