@@ -1,3 +1,11 @@
+# How to use
+
+**Still incomplete**
+simply run the bash script file to run program from local `.venv` dirctory
+
+later you can also pass numerical value (1-3) to automaticly generate a name, person, or list of people along with relevant data required.
+all information is randomly generated based off information from this [Repo](https://github.com/aruljohn/popular-baby-names.git)
+
 # Plan
 - make a local embeded pyton distibution to run on any platform
 - ref local python to run name gen
