@@ -128,8 +128,12 @@ def accessMasterFile(year,boyOrGirl=None):
     if(boyOrGirl):
         #print(boyOrGirl)
         match boyOrGirl:
+            case 1:
+                selection = "boys"
             case "boy":
                 selection = "boys"
+            case 0:
+                selection = "girls"
             case "girl":
                 selection = "girls"
             case _ :
