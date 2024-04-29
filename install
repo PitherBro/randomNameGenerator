@@ -1,0 +1,8 @@
+#!/bin/bash
+
+source config.sh
+
+### VARS ###
+
+### ADDITIONAL ENV SETUP ###
+python3 install.py
