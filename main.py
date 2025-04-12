@@ -1,13 +1,13 @@
 #!/bin/python3
-#native Libs
-import os,sys, datetime
-from pathlib import Path
+# native Libs
+from common import *
+import datetime
 
 
-#custom Libs
+# custom Libs
 import popularNamesParser as babyNames
 
-#imported Libs
+# imported Libs
 
 root = Path(os.path.dirname( __file__ ))
 
@@ -93,7 +93,7 @@ def parseSelectedOption(selection, userInputData=()):
         case 1:
             #we passed console data
             if(userInputData):
-                
+                    
                 pass
             #get user input
             else:

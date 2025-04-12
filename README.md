@@ -15,7 +15,7 @@ All information is randomly generated based off information from this [Repo](htt
 - each module has self checking data set.
 
 ## As it stands
-- works on linux, assumes python3 in installed.
+- works on linux, assumes python3 is installed.
 - uses  [github repository](https://github.com/aruljohn/popular-baby-names.git) of names from 1880-2022 as data source.
 
 ## TODO

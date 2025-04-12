@@ -1,6 +1,5 @@
 #!/bin/python3
-import os,sys,json, random
-from pathlib import Path
+from common import *
 
 root = Path(os.path.dirname( __file__ ))
 dataSources = root/"dataSources"

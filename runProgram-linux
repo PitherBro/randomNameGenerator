@@ -1,8 +1,0 @@
-#!/bin/bash
-root=$(pwd)
-pythonCmd=$root/.venv/bin/python3
-
-$pythonCmd $root/pymain.py $@
-
-#echo "root:: $root"
-#echo "pythonVenv: $pythonCmd"
