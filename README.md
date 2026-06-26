@@ -37,6 +37,7 @@ Outputs are dumped as `json` and `html` under `/temp/*type*` with an embedded cs
 ## As it stands
 - works on linux, assumes python3 is installed.
 - uses  [github repository](https://github.com/aruljohn/popular-baby-names.git) of names from 1880-2022 as data source.
+- [DB_ZIP_FILE](https://github.com/aruljohn/popular-baby-names/archive/refs/heads/master.zip)
 
 ## TODO
 - add logic to do an option base off menu selction

@@ -14,7 +14,7 @@ root = Path(os.path.dirname( __file__ ))
 progPaths = [
     root,
     babyNames.dataSources,
-    babyNames.babyNames_1880_to_2022,
+    babyNames.babyNames_db_folder,
 ]
 
 consoleBanner="#"*16
@@ -70,10 +70,10 @@ def determineSex(isBoy = babyNames.random.randint(0,1)):
     else:
         sex = "boy"
     return sex
-def genName(birthYear = babyNames.random.randint(1880,2022),isBoy = babyNames.random.randint(0,1)):
+def genName(birthYear = babyNames.random.randint(babyNames.year_range[0],babyNames.year_range[1]),isBoy = babyNames.random.randint(0,1)):
     '''Returns a name based off a selected year range and bool value of boy or not'''
     return babyNames.accessMasterFile(birthYear, determineSex(isBoy))
-def generatePerson(birthYear = babyNames.random.randint(1880,2022),isBoy = babyNames.random.randint(0,1)):
+def generatePerson(birthYear = babyNames.random.randint(babyNames.year_range[0],babyNames.year_range[1]),isBoy = babyNames.random.randint(0,1)):
     '''Returns a single person class object'''
     firstName = genName(birthYear, isBoy)
     lastName = genName(birthYear, isBoy)
@@ -105,7 +105,8 @@ def parseSelectedOption(selection, userInputData=()):
                 pass
             #get user input
             else:
-                year = input("What year would you like to select names from?(1880-2022)") or babyNames.random.randint(1880,2022)
+                years_min, years_max = babyNames.getYearsAvailable()
+                year = input(f"What year would you like to select names from?({years_min}-{years_max})") or babyNames.random.randint(1880,2022)
 
                 sexSelection = input("what sex is the name based from?(boy or girl)") or babyNames.random.randint(0,1)
                 
@@ -172,7 +173,24 @@ def consoleParser(consoleCommand):
 
     with open(htmlFilePath, 'w') as f:
         f.write(doc.render())
+
+def gather_data():
+    '''
+    
+    SHOULD PING [REPO](https://github.com/aruljohn/popular-baby-names) 
+    IF commit has different data than the current local copy, then download the latest version of the repo and extract it to the dataSources folder.
+    if the repo is not present, then download it and extract it to the dataSources folder.
+
+    [ZIP_FILE](https://github.com/aruljohn/popular-baby-names/archive/refs/heads/master.zip)
+    
+    '''
+    pass
 if __name__ == "__main__":
+
+    
+
+
+
     #saves program arg list
     args = sys.argv
     progDebugInfo()

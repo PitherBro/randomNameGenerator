@@ -7,7 +7,7 @@ dataSources = root/"dataSources"
 #sourceFile
 #https://github.com/aruljohn/popular-baby-names.git
 #local Dir when installed
-babyNames_1880_to_2022 = Path(dataSources/"popular-baby-names-master")
+babyNames_db_folder = Path(dataSources/"popular-baby-names-master")
 masterFilePath = dataSources/"master.json"
 
 '''
@@ -15,7 +15,17 @@ masterFilePath = dataSources/"master.json"
 modPath = root/"module"
 sys.path.append(modPath)
 '''
+def getYearsAvailable():
+    '''Returns a list of years available in the dataSources folder'''
+    files : List[str]= os.listdir(babyNames_db_folder)
+    years :List[int] = []
+    for y in range(len(files)):
+        if os.path.isdir(babyNames_db_folder/files[y]):
+            years.append(int(files[y]))
+    years.sort()
+    return (years[0], years[-1])
 
+year_range = getYearsAvailable()
 
 masterFile = False
 '''The big file of all the names (File Object with Read Permission)'''
@@ -30,14 +40,14 @@ def getRandomNameByYear(year,boyOrGirl=None):
         if boyOrGirl is None, returns random Girl or Boy name
     '''
     #makes sure year is between 1880 and 2022, reutrns None if not true
-    if( not (year >= 1880 and year <= 2022)):
-        print("please only use a year between 1880 and 2022")
+    if( not (year >= year_range[0] and year <= year_range[1])):
+        print(f"please only use a year between {year_range[0]} and {year_range[1]}")
         return None
     #compiles selected year into the related JSON file name
     fileName = "girl_boy_names_"+ str(year) + ".json"
    
     #comiles the abosulte path to JSON file
-    completeFilePath = babyNames_1880_to_2022/str(year)/fileName
+    completeFilePath = babyNames_db_folder/str(year)/fileName
     fObj =open(completeFilePath,'r')
     #returns the contents of the JSON file
     contentsRaw = dict(json.loads(fObj.read()))
@@ -79,8 +89,8 @@ def createMasterFileJSON():
     
     masterFile = {}
 
-    for x in range(1880,2023):
-        completeFilePath = babyNames_1880_to_2022/str(x)/f"girl_boy_names_{x}.json"
+    for x in range(year_range[0],year_range[1]):
+        completeFilePath = babyNames_db_folder/str(x)/f"girl_boy_names_{x}.json"
         curYearData = dict(json.loads(open(completeFilePath,'r').read()))
         year = curYearData.pop("year")
         masterFile.setdefault(year, curYearData)
@@ -106,8 +116,8 @@ def accessMasterFile(year,boyOrGirl=None):
         masterFile = open(masterFilePath,"r")
 
     #makes sure year is between 1880 and 2022, reutrns None if not true
-    if( not (year >= 1880 and year <= 2022)):
-        print("please only use a year between 1880 and 2022")
+    if( not (year >= year_range[0] and year <= year_range[1])):
+        print(f"please only use a year between {year_range[0]} and {year_range[1]}")
         return None
     contentsRaw = dict(json.loads(masterFile.read()))
 
@@ -149,22 +159,57 @@ def accessMasterFile(year,boyOrGirl=None):
         randListSelection = random.randint(0,namesListSize)
     #print(selection)
     return namesList[randListSelection]
-    
+
+
+def check_master_against_folder():
+    global masterFile
+    #the file is already assigned and being used, no action needed
+    if(masterFile):
+        #print("is here")
+        pass
+    #the file needs to be, and is assigned
+    else:
+        print("not here, not all, dont look.")
+        createMasterFileJSON()
+        masterFile = open(masterFilePath,"r")
+    masterFile.seek(0,0)
+
+    if masterFile:
+        data = dict(json.loads(masterFile.read()))
+    else:
+        # createMasterFileJSON()
+        # data = dict(json.loads(masterFile.read()))
+        pass
+    m_years :List[int]= list(data.keys())
+    if ((m_years[0] == year_range[0]) and (m_years[-1] == year_range[1])):
+        return True
+    else:
+        createMasterFileJSON()
+        return False
+    # print(m_years[0],m_years[-1])
+    # for p in data.keys():
+    #     print(p)
+
+
 def checkModuleIntegretiy():
     '''
     Checks that module directories and files are all there.
     '''
-    return os.path.exists(babyNames_1880_to_2022) and\
-         True
+    have_db_folder = os.path.exists(babyNames_db_folder)
+    master_eq_db_folder = check_master_against_folder()
+
+    return  have_db_folder and\
+            master_eq_db_folder
 
 if  __name__ == "__main__":
     '''if this module is main, lets check the file/module integrity'''
     #print(__name__)
+    check_master_against_folder()
     if(checkModuleIntegretiy()):
         print("Good to Go")
         
     else:
-        print("Names do not exist, begining download")
+        print("A Module Check Failed...")
         print("Consolidating...")
         #createMasterFileJSON()
         print("Removing archive")
