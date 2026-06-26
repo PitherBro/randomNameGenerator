@@ -1,7 +1,6 @@
 #!/bin/python3
 # native Libs
 from common import *
-import datetime
 
 
 # custom Libs
@@ -46,7 +45,7 @@ class Person:
         pass
     def age(self,):
         return datetime.datetime.now().year-self.yearBorn
-    def toJson(self,):
+    def toJson(self,indent=2) -> str:
         objKeys = list(self.__dict__.keys())
         template ={}
         for k in objKeys:
@@ -66,9 +65,10 @@ def progDebugInfo():
     print(consoleBanner)
 def determineSex(isBoy = babyNames.random.randint(0,1)):
     '''Helper function to determine sex of people for name selection'''
-    sex = "boy"
     if not isBoy:
         sex = "girl"
+    else:
+        sex = "boy"
     return sex
 def genName(birthYear = babyNames.random.randint(1880,2022),isBoy = babyNames.random.randint(0,1)):
     '''Returns a name based off a selected year range and bool value of boy or not'''
@@ -80,13 +80,15 @@ def generatePerson(birthYear = babyNames.random.randint(1880,2022),isBoy = babyN
 
 
     return Person(firstName=firstName,lastName=lastName, yearBorn=birthYear,sex=determineSex(isBoy))
-def generatePeople(birthRange=(1880,2022),numberOfPeople = 16):
+def generatePeople(isboy = babyNames.random.randint(0,1),\
+                   birthRange: Tuple[int, int]=(1880,2022),
+                   numberOfPeople : int = 16):
     '''Returns a list of person class objects'''
-    people = [Person]
+    people : List[Person] = []
     for x in range(numberOfPeople):
-        randBirthYear = babyNames.random.randint(birthRange[0],birthRange[1]+1)
-        people.append(generatePerson(randBirthYear))
-    return people[1:numberOfPeople]
+        randBirthYear = babyNames.random.randint(birthRange[0],birthRange[1])
+        people.append(generatePerson(randBirthYear, isboy))
+    return people[0:numberOfPeople]
 
 def parseSelectedOption(selection, userInputData=()):
     match(selection):
@@ -160,6 +162,10 @@ def consoleParser(consoleCommand):
         #exit
         pass
 
+
+
+    with open(htmlFilePath, 'w') as f:
+        f.write(doc.render())
 if __name__ == "__main__":
     #saves program arg list
     args = sys.argv
@@ -172,9 +178,9 @@ if __name__ == "__main__":
     else:
         #check legnth of the argument(1-3)
         #test what each value is and if they are appropriate
-        possibleArgs = args[1:4]
-        actualSize = len(possibleArgs)
-        print(actualSize)
+        possibleArgs = args[1:5]
+        actualSize : int = len(possibleArgs)
+        print(f"# args: {actualSize}")
         match(actualSize):
             #must only be the menu selction option
             case 1:
@@ -187,8 +193,35 @@ if __name__ == "__main__":
                 pass
             #should be both, but in what order?
             case 3:
-                print("should be both, but in what order?")
+                selection = possibleArgs[0]
+                year = possibleArgs[1]
+                sexSelection = possibleArgs[2]
+
+                if selection == "1":
+                    
+                    name = genName(int(year), sexSelection)
+                    print(f"name: {name}")
+                elif selection == "2":
+                    person = generatePerson(int(year), sexSelection)
+                    print(f"person: {person.toJson()}")
+                
+                print(f"Menu selction: {selection}\nYear: {year}\nSex Selection: {determineSex(sexSelection)}")
                 pass
+            case 4:
+                selection : str = possibleArgs[0]
+                year : int = possibleArgs[1]
+                sexSelection : int = int(possibleArgs[2])
+                numberOfPeople : int = int(possibleArgs[3])
+                peoples = generatePeople(sexSelection, (int(year),int(year)),numberOfPeople=numberOfPeople)
+                peoples_json = json.dumps([p.toJson() for p in peoples], indent=2)
+
+                print(f"{peoples_json}",file=open(jsonDataPath/"people.json","w"))
+                
+                json_to_html(peoples, jsonDataPath/"people.json", htmlDataPath/"people.html")
+                print(f"JSON file saved to: {jsonDataPath/'people.json'}")
+                print(f"HTML file saved to: {htmlDataPath/'people.html'}")
+                print(f"Menu selction: {selection}\nYear: {year}\nSex Selection: {determineSex(sexSelection)}\nNumber of People: {numberOfPeople}")
+
             case _ :
                 print("your args too big for your head")
         
