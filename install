@@ -3,6 +3,11 @@
 source config.sh
 
 ### VARS ###
+python3 -m venv $pythonVENV
+
+source $venvScript
+
+pip install -r $venvRequirements
 
 ### ADDITIONAL ENV SETUP ###
-python3 install.py
+# python3 install.py

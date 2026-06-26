@@ -1,18 +1,16 @@
 #!/bin/bash
-root=$(pwd)
-pythonVENV=$root/.venv
-venvScript=$pythonVENV/bin/activate
-pythonCmd=$pythonVENV/bin/python3
+source config.sh
 
 #   Sees if venv exists already, loads venv if so
 if [ -d "$pythonVENV" ]; then
     echo "\"$pythonVENV\" does exist."
-    # source $venvScript
+    source $venvScript
 
 #   Sets up venv and then loads it
 else
     #   Create the virtual environment
-    python3 -m venv $pythonVENV
+    # python3 -m venv $pythonVENV
+    bash install
     #   Access the binary
     source $venvScript
     #   Install dependencies
@@ -20,7 +18,7 @@ else
     genHeader "Python loaded/dependencies installed" $BASH_SEPERATOR_MAJOR
 fi
 
-$pythonCmd $root/main.py $@
+$pythonCmd $@
 
 #echo "root:: $root"
 #echo "pythonVenv: $pythonCmd"

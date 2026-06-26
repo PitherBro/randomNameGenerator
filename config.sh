@@ -1,6 +1,13 @@
 #collection of variables to launch/set program configuration
+
+root=$(pwd)
+pythonVENV=$root/.venv
+venvScript=$pythonVENV/bin/activate
+pythonMain=$root/main.py
+pythonCmd="python $pythonMain"
+
+
 workingDir=$(pwd)
-pythonVENV=$workingDir/venv
 venvScript=$pythonVENV/bin/activate
 venvRequirements=$workingDir/requirements.txt
 
