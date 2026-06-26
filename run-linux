@@ -9,13 +9,10 @@ if [ -d "$pythonVENV" ]; then
 #   Sets up venv and then loads it
 else
     #   Create the virtual environment
-    # python3 -m venv $pythonVENV
+    # install dependencies
     bash install
-    #   Access the binary
+    #   Access the venv
     source $venvScript
-    #   Install dependencies
-    pip install -r $venvRequirements
-    genHeader "Python loaded/dependencies installed" $BASH_SEPERATOR_MAJOR
 fi
 
 $pythonCmd $@

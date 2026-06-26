@@ -199,6 +199,7 @@ if __name__ == "__main__":
                 pass
             #should be both, but in what order?
             case 3:
+                # menu option, year, number of people
                 selection = possibleArgs[0]
                 year = possibleArgs[1]
                 sexSelection = possibleArgs[2]
@@ -224,9 +225,10 @@ if __name__ == "__main__":
                     json_to_html(peoples, jsonDataPath/"people.json", htmlDataPath/"people.html")
                     print(f"JSON file saved to: {jsonDataPath/'people.json'}")
                     print(f"HTML file saved to: {htmlDataPath/'people.html'}")
-                print(f"Menu selction: {selection}\nYear: {year}\nSex Selection: {determineSex(sexSelection)}")
+                print(f"Menu selction: {selection}\nYear: {year}\nSex Selection: {'RANDOM'}")
                 pass
             case 4:
+                # menu option, year, sex, number of people
                 selection : str = possibleArgs[0]
                 year : int = possibleArgs[1]
                 sexSelection : int = int(possibleArgs[2])

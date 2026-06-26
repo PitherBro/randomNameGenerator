@@ -8,6 +8,8 @@ python3 -m venv $pythonVENV
 source $venvScript
 
 pip install -r $venvRequirements
+genHeader "Python loaded/dependencies installed" $BASH_SEPERATOR_MAJOR
+
 
 ### ADDITIONAL ENV SETUP ###
 # python3 install.py

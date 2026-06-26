@@ -2,11 +2,31 @@
 
 # How to use
 
-Simply run the bash script file to run program from local `.venv` dirctory
+Simply run the bash script file `run-linux` to run program from local `.venv` dirctory
 
-Later you can also pass numerical value (1-3) to automaticly generate a name, person, or list of people along with relevant data required.
+**Currently** you can pass:
+>
+>`3 1969 100`
+>
+>for 100 random first and last names from 1969
+>
+>`3 1969 0 100`
+>
+>for 100 girl first and last names from 1969
+>
+>`3 1969 1 100`
+>
+>for 100 boy first and last names from 1969
 
-All information is randomly generated based off information from this [Repo](https://github.com/aruljohn/popular-baby-names.git)
+As a full command:
+> `bash run-linux 3 1969 1 100`
+>
+> will make 100 boy first and last names from 1969
+
+Outputs are dumped as `json` and `html` under `/temp/*type*` with an embedded css styling from `style.css`
+
+## All information is randomly generated based off information from this [Repo](https://github.com/aruljohn/popular-baby-names.git)
+> Thank you Aruljohn for providing a comprohensive data set.
 
 ## Plan
 - make a local embeded pyton distibution to run on any platform
@@ -30,6 +50,8 @@ All information is randomly generated based off information from this [Repo](htt
 
 - completed user input for case 1.
 - add in console input for case 1
+- add in automated input for case 3
+- add in automated input for case 4
 - universally validate the console commands assuming the first arg is a menu selection.
 
 
