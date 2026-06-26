@@ -1,152 +1,602 @@
 [
   {
     "yearBorn": 1969,
-    "sex": "girl",
-    "firstName": "Ursula",
-    "lastName": "Jami"
+    "sex": "boy",
+    "firstName": "Darrick",
+    "lastName": "Fredrick"
   },
   {
     "yearBorn": 1969,
     "sex": "girl",
-    "firstName": "Louisa",
-    "lastName": "Shanda"
+    "firstName": "Hazel",
+    "lastName": "Lesley"
   },
   {
     "yearBorn": 1969,
     "sex": "girl",
-    "firstName": "Shari",
-    "lastName": "Cara"
+    "firstName": "Jenifer",
+    "lastName": "Anastasia"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Harlan",
+    "lastName": "Daryle"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Max",
+    "lastName": "Dennis"
   },
   {
     "yearBorn": 1969,
     "sex": "girl",
-    "firstName": "Rosalinda",
-    "lastName": "Jodi"
+    "firstName": "Madeline",
+    "lastName": "Claudine"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Marcus",
+    "lastName": "Jody"
   },
   {
     "yearBorn": 1969,
     "sex": "girl",
+    "firstName": "Traci",
+    "lastName": "Sally"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Monroe",
+    "lastName": "Luke"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Derek",
+    "lastName": "Dusty"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Kennith",
+    "lastName": "Javier"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
     "firstName": "Antonia",
-    "lastName": "Joy"
+    "lastName": "Nestor"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Scotty",
+    "lastName": "Barrett"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Lane",
+    "lastName": "Dennis"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Everette",
+    "lastName": "Fabian"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Amos",
+    "lastName": "Lloyd"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Tim",
+    "lastName": "Elvis"
   },
   {
     "yearBorn": 1969,
     "sex": "girl",
-    "firstName": "Mari",
-    "lastName": "Carleen"
+    "firstName": "Lolita",
+    "lastName": "Verna"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Eli",
+    "lastName": "Brock"
   },
   {
     "yearBorn": 1969,
     "sex": "girl",
-    "firstName": "Lorinda",
-    "lastName": "Jolene"
+    "firstName": "Kirsten",
+    "lastName": "Darcie"
   },
   {
     "yearBorn": 1969,
     "sex": "girl",
-    "firstName": "Janette",
-    "lastName": "Meredith"
+    "firstName": "Guadalupe",
+    "lastName": "Bobbi"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Silas",
+    "lastName": "Jose"
   },
   {
     "yearBorn": 1969,
     "sex": "girl",
-    "firstName": "Sonia",
-    "lastName": "Francisca"
+    "firstName": "Tammi",
+    "lastName": "Mari"
   },
   {
     "yearBorn": 1969,
     "sex": "girl",
-    "firstName": "Rosalind",
-    "lastName": "Robbie"
+    "firstName": "Marsha",
+    "lastName": "Inez"
   },
   {
     "yearBorn": 1969,
     "sex": "girl",
-    "firstName": "Sheree",
-    "lastName": "Amie"
+    "firstName": "Cathryn",
+    "lastName": "Alyson"
   },
   {
     "yearBorn": 1969,
     "sex": "girl",
-    "firstName": "Olivia",
-    "lastName": "Theresa"
+    "firstName": "Denice",
+    "lastName": "Shellie"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Irvin",
+    "lastName": "Rodrigo"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Giovanni",
+    "lastName": "Raphael"
   },
   {
     "yearBorn": 1969,
     "sex": "girl",
-    "firstName": "Trena",
-    "lastName": "Janice"
+    "firstName": "Kecia",
+    "lastName": "Geri"
   },
   {
     "yearBorn": 1969,
     "sex": "girl",
-    "firstName": "Lee",
-    "lastName": "Claudia"
+    "firstName": "Michelle",
+    "lastName": "Casandra"
   },
   {
     "yearBorn": 1969,
     "sex": "girl",
-    "firstName": "Caren",
-    "lastName": "Leann"
+    "firstName": "Karyn",
+    "lastName": "Scott"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Benito",
+    "lastName": "Darby"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Franklyn",
+    "lastName": "Federico"
   },
   {
     "yearBorn": 1969,
     "sex": "girl",
-    "firstName": "Nichole",
-    "lastName": "Janet"
+    "firstName": "Chandra",
+    "lastName": "Rachelle"
   },
   {
     "yearBorn": 1969,
     "sex": "girl",
-    "firstName": "Corey",
-    "lastName": "Kathleen"
+    "firstName": "Susie",
+    "lastName": "Vicki"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Adolfo",
+    "lastName": "Jacques"
   },
   {
     "yearBorn": 1969,
     "sex": "girl",
-    "firstName": "Leanne",
-    "lastName": "Karie"
+    "firstName": "Juliette",
+    "lastName": "Tamara"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Graham",
+    "lastName": "Marcel"
   },
   {
     "yearBorn": 1969,
     "sex": "girl",
-    "firstName": "Leilani",
-    "lastName": "Robert"
+    "firstName": "Michell",
+    "lastName": "Yolonda"
   },
   {
     "yearBorn": 1969,
     "sex": "girl",
-    "firstName": "Francine",
-    "lastName": "Leah"
+    "firstName": "Athena",
+    "lastName": "Lorie"
   },
   {
     "yearBorn": 1969,
     "sex": "girl",
-    "firstName": "Loriann",
-    "lastName": "Candy"
+    "firstName": "Christopher",
+    "lastName": "Rachael"
   },
   {
     "yearBorn": 1969,
     "sex": "girl",
-    "firstName": "Eunice",
-    "lastName": "Kaye"
+    "firstName": "Kelly",
+    "lastName": "Gabriela"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Christopher",
+    "lastName": "Billy"
   },
   {
     "yearBorn": 1969,
     "sex": "girl",
-    "firstName": "Jeanne",
-    "lastName": "Charles"
+    "firstName": "Lisette",
+    "lastName": "Anne"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Travis",
+    "lastName": "Armando"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Freddy",
+    "lastName": "Morgan"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Frankie",
+    "lastName": "Enoch"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Alfredo",
+    "lastName": "Joaquin"
   },
   {
     "yearBorn": 1969,
     "sex": "girl",
-    "firstName": "Tresa",
-    "lastName": "Betty"
+    "firstName": "Danette",
+    "lastName": "Jana"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Landon",
+    "lastName": "Duncan"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Lindsey",
+    "lastName": "Beau"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Enrique",
+    "lastName": "Armando"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Norris",
+    "lastName": "Ignacio"
   },
   {
     "yearBorn": 1969,
     "sex": "girl",
-    "firstName": "Rosemary",
-    "lastName": "Rosie"
+    "firstName": "Terrie",
+    "lastName": "Doris"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Roland",
+    "lastName": "Jefferey"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "girl",
+    "firstName": "Jodi",
+    "lastName": "Marlo"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "girl",
+    "firstName": "Rona",
+    "lastName": "Esperanza"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Al",
+    "lastName": "Harvey"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Joey",
+    "lastName": "Leon"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Gilberto",
+    "lastName": "Douglass"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Jodie",
+    "lastName": "Steve"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Roy",
+    "lastName": "Harry"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Gerardo",
+    "lastName": "Clint"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Jeremiah",
+    "lastName": "Nestor"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Bennie",
+    "lastName": "Garry"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "girl",
+    "firstName": "Vicky",
+    "lastName": "Juliana"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "girl",
+    "firstName": "Ronna",
+    "lastName": "Joni"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "girl",
+    "firstName": "Sallie",
+    "lastName": "Angelique"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "girl",
+    "firstName": "Marcie",
+    "lastName": "Shauna"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Agustin",
+    "lastName": "Colin"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "girl",
+    "firstName": "Benita",
+    "lastName": "Lea"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Dino",
+    "lastName": "Francesco"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "girl",
+    "firstName": "Danita",
+    "lastName": "Adrienne"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "girl",
+    "firstName": "Gia",
+    "lastName": "Celia"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "girl",
+    "firstName": "Diane",
+    "lastName": "Annemarie"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "girl",
+    "firstName": "Blanca",
+    "lastName": "Tamra"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "girl",
+    "firstName": "Toni",
+    "lastName": "Roberta"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "girl",
+    "firstName": "Whitney",
+    "lastName": "Camille"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "girl",
+    "firstName": "Norma",
+    "lastName": "Christin"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Rico",
+    "lastName": "Lamar"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Vito",
+    "lastName": "Pasquale"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Pierre",
+    "lastName": "Sebastian"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "girl",
+    "firstName": "Katy",
+    "lastName": "Denice"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Aurelio",
+    "lastName": "Sanford"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "girl",
+    "firstName": "Carlene",
+    "lastName": "Jo"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "girl",
+    "firstName": "Clarissa",
+    "lastName": "Luann"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Wade",
+    "lastName": "Leonardo"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Marty",
+    "lastName": "Linwood"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "girl",
+    "firstName": "Melody",
+    "lastName": "Dara"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "girl",
+    "firstName": "Edith",
+    "lastName": "Angel"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Arnulfo",
+    "lastName": "Bill"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "girl",
+    "firstName": "Vicky",
+    "lastName": "Linette"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Octavio",
+    "lastName": "Lance"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Kimberly",
+    "lastName": "Micah"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "August",
+    "lastName": "Emanuel"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Valentin",
+    "lastName": "Paul"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "girl",
+    "firstName": "Tabatha",
+    "lastName": "Rhonda"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "boy",
+    "firstName": "Marcello",
+    "lastName": "Jody"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "girl",
+    "firstName": "Leisa",
+    "lastName": "Valarie"
+  },
+  {
+    "yearBorn": 1969,
+    "sex": "girl",
+    "firstName": "Candi",
+    "lastName": "Brenda"
   }
 ]

@@ -1,5 +1,71 @@
+
+:root {
+    --background-color: black;
+    --text-color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;   
+}
 .head,body,header {
     background-color: black;
     color: white;
-    
+
+}
+table {
+    border: 1px solid white;
+    border-collapse: collapse;
+    cellpadding: 5px;
+    cellspacing: 0;
+}
+th, td {
+    border: 1px solid white;
+    padding: 5px;
+    background-color: color-mix(in srgb, brown 75%, black 25%);
+}
+th{
+    border: 4px double blue;
+    border-bottom: 2px solid yellow;
+
+}
+td{
+    border-bottom: 2px solid yellow;
+    border-right: 4px double blue;
+    border-left: 4px double blue;
+
+}
+
+p{
+    color: white;
+
+}
+.header-0 {
+    color: green;
+    text-align: center;
+}
+.column-0 {
+    color: gold;
+    /* background-color: darkslategrey; */
+    text-align: center;
+}
+.column-1 {
+    color: blue;
+    /* background-color: darkslategrey; */
+    text-align: center;
+}
+.column-2 {
+    color: gold;
+    /* background-color: darkslategrey; */
+    text-align: center;
+}
+.column-3{
+    color: blue;
+    /* background-color: darkslategrey; */
+    text-align: center;
+    text-decoration: double underline;
+}
+.column-4 {
+    color: gold;
+    /* background-color: darkslategrey; */
+    text-align: center;
+    text-decoration: double underline;
+
 }

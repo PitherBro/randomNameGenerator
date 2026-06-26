@@ -80,12 +80,18 @@ def generatePerson(birthYear = babyNames.random.randint(1880,2022),isBoy = babyN
 
 
     return Person(firstName=firstName,lastName=lastName, yearBorn=birthYear,sex=determineSex(isBoy))
-def generatePeople(isboy = babyNames.random.randint(0,1),\
+def generatePeople(isboy :int = None,\
                    birthRange: Tuple[int, int]=(1880,2022),
                    numberOfPeople : int = 16):
     '''Returns a list of person class objects'''
     people : List[Person] = []
+    random_sex = False
+    if isboy == None:
+        random_sex = True
     for x in range(numberOfPeople):
+        if random_sex:
+            isboy = babyNames.random.randint(0,1)
+
         randBirthYear = babyNames.random.randint(birthRange[0],birthRange[1])
         people.append(generatePerson(randBirthYear, isboy))
     return people[0:numberOfPeople]
@@ -204,7 +210,20 @@ if __name__ == "__main__":
                 elif selection == "2":
                     person = generatePerson(int(year), sexSelection)
                     print(f"person: {person.toJson()}")
-                
+                elif selection == "3":
+
+                    selection : str = possibleArgs[0]
+                    year : int = possibleArgs[1]
+                    numberOfPeople : int = int(possibleArgs[2])
+
+                    peoples = generatePeople(None, birthRange=(int(year), int(year)), numberOfPeople=numberOfPeople)
+                    peoples_json = json.dumps([p.toJson() for p in peoples], indent=2)
+
+                    print(f"{peoples_json}",file=open(jsonDataPath/"people.json","w"))
+                    
+                    json_to_html(peoples, jsonDataPath/"people.json", htmlDataPath/"people.html")
+                    print(f"JSON file saved to: {jsonDataPath/'people.json'}")
+                    print(f"HTML file saved to: {htmlDataPath/'people.html'}")
                 print(f"Menu selction: {selection}\nYear: {year}\nSex Selection: {determineSex(sexSelection)}")
                 pass
             case 4:
