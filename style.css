@@ -33,39 +33,67 @@ td{
 
 }
 
+table{
+
+}
+
 p{
     color: white;
+    text-shadow: 1px 1px 4px eggshell;
 
 }
 .header-0 {
     color: green;
     text-align: center;
+    text-shadow: 1px 1px 4px darkgreen;
+
 }
+/* COL NUMBER */
 .column-0 {
-    color: gold;
+    color: yellow;
     /* background-color: darkslategrey; */
     text-align: center;
+    text-shadow: 1px 1px 4px darkgoldenrod;
+
 }
+/* YEAR */
 .column-1 {
     color: blue;
     /* background-color: darkslategrey; */
     text-align: center;
+    text-shadow: 1px 1px 4px darkcyan;
 }
-.column-2 {
-    color: gold;
+/* SEX */
+.column-2-g {
+    color: pink;
     /* background-color: darkslategrey; */
     text-align: center;
+    text-shadow: 1px 1px 4px darkgoldenrod;
+
 }
-.column-3{
+.column-2-b {
     color: blue;
     /* background-color: darkslategrey; */
     text-align: center;
-    text-decoration: double underline;
+    text-shadow: 1px 1px 4px darkgoldenrod;
+
 }
-.column-4 {
-    color: gold;
+/* F_NAME */
+.column-3{
+    color: yellow;
     /* background-color: darkslategrey; */
     text-align: center;
     text-decoration: double underline;
+    text-shadow: 1px 1px 4px darkgoldenrod;
+
+}
+/* L_NAME */
+.column-4 {
+    color: yellow;
+    /* background-color: darkslategrey; */
+    text-align: center;
+    text-decoration: double underline;
+    text-shadow: 1px 1px 4px darkgoldenrod;
+
 
 }

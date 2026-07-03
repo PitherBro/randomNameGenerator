@@ -251,11 +251,30 @@ if __name__ == "__main__":
                 year : int = possibleArgs[1]
                 sexSelection : int = int(possibleArgs[2])
                 numberOfPeople : int = int(possibleArgs[3])
+                # sanatize inputs
+                if sexSelection != 0 and sexSelection != 1:
+                    print("sex selection must be 0 or 1, using random selection")
+                    sexSelection = babyNames.random.randint(0,1)
+                if numberOfPeople < 1:
+                    print("number of people must be greater than 0, using 1")
+                    numberOfPeople = 1
+                if numberOfPeople > 1000:
+                    print("number of people must be less than 1000, using 1000")
+                    numberOfPeople = 1000
+                if int(year) < babyNames.year_range[0] or int(year) > babyNames.year_range[1]:
+                    print(f"year must be between {babyNames.year_range[0]} and {babyNames.year_range[1]}, using random year")
+                    year = babyNames.random.randint(babyNames.year_range[0],babyNames.year_range[1])
+
+                #generate the people
                 peoples = generatePeople(sexSelection, (int(year),int(year)),numberOfPeople=numberOfPeople)
+                
+                #saves the list of people to a json file
                 peoples_json = json.dumps([p.toJson() for p in peoples], indent=2)
 
+
                 print(f"{peoples_json}",file=open(jsonDataPath/"people.json","w"))
-                
+
+                # converts JSON to an html file
                 json_to_html(peoples, jsonDataPath/"people.json", htmlDataPath/"people.html")
                 print(f"JSON file saved to: {jsonDataPath/'people.json'}")
                 print(f"HTML file saved to: {htmlDataPath/'people.html'}")
